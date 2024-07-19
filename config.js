@@ -20,7 +20,7 @@ const settingsMenu = [
     {title: "PM Auto blocker", env_var: "PMB_VAR"},
     {title: "Disable bot in PM", env_var: "DIS_PM"}
   ]
-DATABASE_URL = process.env.DATABASE_URL === undefined ? 'postgres://vajiratech_user:oSIFl2xmSojMZ0rkzdd0g0W6msuVTpNN@dpg-cpd7fjv109ks73e5gtig-a.frankfurt-postgres.render.com/vajiratech' : process.env.POSTGRESQL_URL' : process.env.DATABASE_URL;
+DATABASE_URL = process.env.DATABASE_URL === undefined ? './bot.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 if (!(process.env.SESSION || process.env.SESSION_ID)) throw new Error("Raganork~5e57ab6fbb22655df6eb74c18cdf4192:782f783979774d6a6664773d")
 module.exports = {
